@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8D Audio Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>8D Audio Converter</h1>
+        <p class="headphones-note">For the best 360° horizontal 8D experience, use headphones.</p>
+
+        <div class="input-group">
+            <label for="input-file">Input MP3:</label>
+            <input type="file" id="input-file" accept="audio/mp3" />
+        </div>
+
+        <div class="slider-group">
+            <label for="rotation-speed">Horizontal Rotation Speed (Hz): <span id="speed-value">0.2</span></label>
+            <input type="range" id="rotation-speed" min="1" max="10" value="2">
+        </div>
+
+        <div class="slider-group">
+            <label for="rotation-depth">Horizontal Rotation Depth (%): <span id="depth-value">70</span></label>
+            <input type="range" id="rotation-depth" min="10" max="100" value="70">
+        </div>
+
+        <div class="slider-group">
+            <label for="reverb-intensity">Reverb Intensity (%): <span id="reverb-value">20</span></label>
+            <input type="range" id="reverb-intensity" min="0" max="50" value="20">
+        </div>
+
+        <div class="button-group">
+            <button id="convert-btn">Convert to 360° 8D</button>
+            <button id="cancel-btn" disabled>Cancel</button>
+        </div>
+
+        <div class="progress-group">
+            <label for="progress-bar">Progress:</label>
+            <progress id="progress-bar" value="0" max="100">0%</progress>
+            <span id="progress-value">0%</span>
+            <span id="time-left">–</span>
+        </div>
+
+        <p id="status">Ready to convert</p>
+        <a id="download-link" style="display: none;">Download 8D Audio (WAV)</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
